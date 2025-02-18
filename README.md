@@ -44,7 +44,7 @@ A Python-based tool designed to optimize the packing of pallets into shipping co
 - **Pallet 1**:  
   - Name: `pallet_1`  
   - Dimensions: 100 cm x 120 cm x 80 cm  
-  - Weight: 560 kg  
+  - Weight: 550 kg  
   - Quantity: 33 
   - Stackable: No
 
