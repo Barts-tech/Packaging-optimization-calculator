@@ -1,59 +1,49 @@
-# Packaging Optimization Calculator
+📦 Optimization Calculator – Smart Cargo Packing & Visualization
+🚚 Optimize your container space with advanced AI-driven packing algorithms! 📊
+________________________________________
+🚀 Features
+✅ Advanced Packing Algorithms – Space Optimization (B&B & Greedy), Load Stability & Cargo Safety
+✅ 3D Visualization – Interactive container loading visualization using Matplotlib
+✅ QR Code Labels – Generate QR-coded PDF labels for easy logistics tracking
+✅ Smart UI – Modern PySide6 GUI with smooth animations & user-friendly experience
+✅ Multiple Strategies – Choose from Space Optimization, Load Stability, or Cargo Safety
+✅ Automated Report Generation – Export labels and packing results as PDFs
 
-A Python-based tool designed to optimize the packing of pallets into shipping containers, considering their dimensions, weight, and stackability. The program uses the **bin packing algorithm** to efficiently distribute pallets into containers of varying sizes.
+  ________________________________________
+🔧 Installation
+Make sure you have Python 3.8+ installed. Then, install dependencies:
+bash
 
----
+git clone https://github.com/yourusername/optimization-calculator.git
+cd optimization-calculator
+pip install -r requirements.txt
+Run the application:
+bash
 
-## Features
-
-- **Pallet Input**: Enter pallet name, dimensions (length, width, height in centimeters), weight, quantity, and stackability.
-- **Container Suggestions**: The program recommends suitable container types (20' or 40') based on the total weight and volume of the pallets.
-- **Efficient Packing**: The bin packing algorithm ensures pallets are packed optimally to minimize unused space while respecting weight and volume limits.
-- **Stackability**: Pallets that can be stacked are packed accordingly, maximizing available space.
-- **Detailed Output**: The program provides a detailed breakdown of how pallets are packed into containers, including the number of containers used and pallet specifics.
-
----
-
-## How It Works
-
-1. **Input Pallet Data**:  
-   Users input pallet details, such as:
-   - Name
-   - Dimensions (length, width, height in centimeters)
-   - Weight (in kilograms)
-   - Quantity
-   - Stackability (whether the pallet can be stacked or not)
-   
-2. **Container Suggestion**:  
-   Based on the total weight and volume of the pallets, the program suggests the most suitable container type (either 20' or 40').
-
-3. **Packing Process**:  
-   The pallets are packed into containers, ensuring the total weight and volume do not exceed container limits.
-
-4. **Results**:  
-   After packing, the program displays:
-   - The number of containers used
-   - A list of packed pallets, including quantity, weight, and volume
-
----
-
-## Example
-
-### User Input:
-
-- **Pallet 1**:  
-  - Name: `pallet_1`  
-  - Dimensions: 100 cm x 120 cm x 80 cm  
-  - Weight: 550 kg  
-  - Quantity: 33 
-  - Stackable: No
-
-- **Pallet 2**:  
-  - Name: `pallet_2`  
-  - Dimensions: 150 cm x 150 cm x 120 cm  
-  - Weight: 250 kg  
-  - Quantity: 6 
-  - Stackable: Yes
-
-
+python main.py
+________________________________________
+📜 Usage
+1.	Enter your pallet dimensions & weight
+2.	Choose an optimization strategy:
+o	🏠 Space Optimization → Maximizes efficiency using hybrid B&B & Greedy algorithm
+o	🏋 Load Stability → Best-Fit Decreasing algorithm ensures safe stacking
+o	🔒 Cargo Safety → Least Average Available Fit strategy for secure transport
+3.	Click "Calculate" → The system will pack pallets into the most optimal containers
+4.	View 3D visualization 📊 → See how pallets are placed
+5.	Generate PDF labels with QR codes 🔍
+________________________________________
+⚙️ Tech Stack
+🔹 Python 3.8+ – Main programming language
+🔹 PySide6 (Qt for Python) – GUI & animations
+🔹 Matplotlib (mpl_toolkits.mplot3d) – 3D visualization of packing layout
+🔹 NumPy – Optimized mathematical operations
+🔹 FPDF & QR Code – Label & report generation
+________________________________________
+🛠 Planned Features
+🔜 📊 AI-Driven Packing Optimization – Implementation of Machine Learning models to predict and suggest the most efficient pallet arrangement based on historical data.
+🔜 🧠 Deep Learning-based Packing Strategy – Neural Networks for real-time optimization and decision-making.
+🔜 📈 Data Analytics Dashboard – Generate insights on space utilization, cost efficiency, and packing trends to improve logistics operations.
+🔜 📂 CSV/Excel Export – Save packing results to external files for further processing and integration with ERP/WMS systems.
+🔜 ☁️ Cloud Integration – Sync and share packing results across teams in real time.
+🔜 🚀 Adaptive Learning System – The system will learn from past optimizations and dynamically suggest better configurations over time using Reinforcement Learning techniques.
 
